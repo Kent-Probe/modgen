@@ -1,0 +1,31 @@
+{
+  "item.modgen.copper_ingot" : "Copper Ingot",
+  "item.modgen.copper_wire" : "Copper Wire",
+  "item.modgen.coppered_apple": "Coppered Apple",
+
+  "item.modgen.copper_shovel": "Copper Shovel",
+  "item.modgen.copper_sword": "Copper Sword",
+  "item.modgen.copper_hoe": "Copper Hoe",
+  "item.modgen.copper_axe": "Copper Axe",
+  "item.modgen.copper_pickaxe": "Copper Pickaxe",
+
+  "item.modgen.copper_helmet": "Copper Helmet",
+  "item.modgen.copper_chestplate": "Copper Chestplate",
+  "item.modgen.copper_boots": "Copper Boots",
+  "item.modgen.copper_leggings" : "Copper Leggings",
+
+  "block.modgen.copper_block" : "Copper Block",
+  "block.modgen.copper_ore" : "Copper Ore",
+
+  "block.modgen.copper_stairs": "Copper Stairs",
+  "block.modgen.copper_fence": "Copper Fence",
+  "block.modgen.copper_fence_gate": "Copper Fence Gate",
+  "block.modgen.copper_pressure_plate": "Copper Pressure Plate",
+  "block.modgen.copper_slab": "Copper Slab",
+  "block.modgen.copper_button": "Copper Button",
+
+
+
+  "itemGroup.courseTab": "Mod next Generation"
+
+}

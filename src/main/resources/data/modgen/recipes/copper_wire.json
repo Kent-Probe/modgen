@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "xmx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "modgen:copper_ingot"
+    },
+    "m": {
+      "item": "minecraft:apple"
+    }
+  },
+  "result": {
+    "item": "modgen:copper_wire"
+  }
+}

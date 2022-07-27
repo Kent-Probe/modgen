@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modgen:block/copper_slab"
+    },
+    "type=double": {
+      "model": "modgen:block/copper_block"
+    },
+    "type=top": {
+      "model": "modgen:block/copper_slab_top"
+    }
+  }
+}

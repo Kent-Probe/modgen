@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " x ",
+    " x ",
+    " i "
+  ],
+  "key": {
+    "x": {
+      "item": "modgen:copper_ingot"
+    },
+    "i": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "modgen:copper_sword"
+  }
+}

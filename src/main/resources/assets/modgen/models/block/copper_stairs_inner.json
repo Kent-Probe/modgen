@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "modgen:block/copper_block",
+    "top": "modgen:block/copper_block",
+    "side": "modgen:block/copper_block"
+  }
+}
