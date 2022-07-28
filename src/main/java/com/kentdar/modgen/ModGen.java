@@ -6,8 +6,11 @@ import com.kentdar.modgen.item.ModItems;
 import com.kentdar.modgen.util.Config;
 import com.kentdar.modgen.util.Registration;
 import com.mojang.datafixers.TypeRewriteRule;
+import com.mojang.realmsclient.gui.RealmsDataFetcher;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -83,6 +86,7 @@ public class ModGen
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
+        RenderTypeLookup.setRenderLayer(ModBlock.ZUCCHINI_CROP.get(), RenderType.getCutout());
 
     }
 

@@ -6,11 +6,9 @@ import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 
-import javax.tools.Tool;
 import java.util.function.Supplier;
 
 public class ModBlock {
@@ -61,7 +59,9 @@ public class ModBlock {
                     .hardnessAndResistance(2f, 5f)
                     .harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 
-
+    public static final RegistryObject<Block> ZUCCHINI_CROP = Registration.BLOCKS
+            .register("zucchini_crop",
+                    () -> new ZucchiniCrops(AbstractBlock.Properties.from(Blocks.WHEAT)));
 
     public static void register(){}
 

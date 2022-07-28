@@ -1,6 +1,7 @@
 package com.kentdar.modgen.item;
 
 import com.kentdar.modgen.ModGen;
+import com.kentdar.modgen.block.ModBlock;
 import com.kentdar.modgen.util.Registration;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -21,11 +22,18 @@ public class ModItems {
     public static final RegistryObject<Item> COPPER_WIRE =
             Registration.ITEMS.register("copper_wire",
                     () -> new Item(new Item.Properties().group(ModGen.COURSE_TAB)));
-    //comida
+    //comida- manzana
     public static final RegistryObject<Item> COPPERED_APPLE =
-            Registration.ITEMS.register("copper_apple",
+            Registration.ITEMS.register("coppered_apple",
                     () -> new CopperedApple());
 
+    //Cultivo
+    public static final RegistryObject<Item> ZUCCHINI_SEED =
+            Registration.ITEMS.register("zucchini_seed",
+                    () -> new BlockItem(ModBlock.ZUCCHINI_CROP.get(),
+                            new Item.Properties().group(ModGen.COURSE_TAB)));
+
+    //Mineral del cobre
     public static final RegistryObject<Item> COPPER_RAW =
             Registration.ITEMS.register("copper_raw",
                     () -> new Item(new Item.Properties().group(ModGen.COURSE_TAB)));
