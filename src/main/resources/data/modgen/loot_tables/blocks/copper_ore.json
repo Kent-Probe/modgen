@@ -16,7 +16,18 @@
               }
             }
           ],
-          "name": "modgen:copper_raw"
+          "name": "modgen:copper_raw",
+          "weight": 90
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modgen:copper_wire",
+          "weight": 10
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
         }
       ]
     }

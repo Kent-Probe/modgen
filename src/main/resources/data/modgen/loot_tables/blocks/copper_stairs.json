@@ -8,6 +8,11 @@
                     "type": "minecraft:item",
                     "name": "modgen:copper_stairs"
                 }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:survives_explosion"
+                }
             ]
         }
     ]
