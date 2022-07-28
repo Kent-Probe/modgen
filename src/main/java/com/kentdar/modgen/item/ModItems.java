@@ -23,8 +23,12 @@ public class ModItems {
                     () -> new Item(new Item.Properties().group(ModGen.COURSE_TAB)));
     //comida
     public static final RegistryObject<Item> COPPERED_APPLE =
-            Registration.ITEMS.register("coppered_apple",
+            Registration.ITEMS.register("copper_apple",
                     () -> new CopperedApple());
+
+    public static final RegistryObject<Item> COPPER_RAW =
+            Registration.ITEMS.register("copper_raw",
+                    () -> new Item(new Item.Properties().group(ModGen.COURSE_TAB)));
 
     /* Herramientas */
     //Pala

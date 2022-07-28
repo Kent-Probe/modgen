@@ -6,7 +6,17 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "modgen:copper_ore"
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 4.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "modgen:copper_raw"
         }
       ]
     }
