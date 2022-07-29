@@ -33,13 +33,13 @@ public class ModFluids {
 
     public static final ForgeFlowingFluid.Properties CUM_PROPERTIES = new ForgeFlowingFluid.Properties(
             () -> CUM_FLUID.get(), () -> CUM_FLOWING.get(), FluidAttributes.builder(CUM_STILL_RL, CUM_FLOWING_RL)
-            .density(15).luminosity(2).rarity(Rarity.RARE).sound(SoundEvents.ITEM_HONEY_BOTTLE_DRINK).overlay(CUM_OVERLAY_RL)
-            .viscosity(5)).slopeFindDistance(2).levelDecreasePerBlock(2)
+            .density(15000).luminosity(2000).color(0xE7E7E7).rarity(Rarity.RARE).sound(SoundEvents.ITEM_HONEY_BOTTLE_DRINK).overlay(CUM_OVERLAY_RL)
+            .viscosity(5000)).slopeFindDistance(3).levelDecreasePerBlock(3)
             .block(() -> ModFluids.CUM_BLOCK.get()).bucket(() -> ModItems.CUM_BUCKET.get());
 
     public static final RegistryObject<FlowingFluidBlock> CUM_BLOCK = Registration.BLOCKS.register("cum",
             () -> new FlowingFluidBlock(() -> ModFluids.CUM_FLUID.get(), AbstractBlock.Properties.create(Material.WATER)
-                    .doesNotBlockMovement().hardnessAndResistance(100.0f).noDrops()));
+                    .doesNotBlockMovement().hardnessAndResistance(1000.0f).jumpFactor(5).noDrops()));
 
     public static void register() { }
 }
