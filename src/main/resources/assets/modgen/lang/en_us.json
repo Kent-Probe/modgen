@@ -15,6 +15,7 @@
   "item.modgen.copper_boots": "Copper Boots",
   "item.modgen.copper_leggings" : "Copper Leggings",
 
+  "item.modgen.cum_bucket": "Cum Bucket",
 
   "block.modgen.zucchini_crop": "Zucchini Seed",
 
@@ -27,6 +28,7 @@
   "block.modgen.copper_pressure_plate": "Copper Pressure Plate",
   "block.modgen.copper_slab": "Copper Slab",
   "block.modgen.copper_button": "Copper Button",
+
 
   "itemGroup.courseTab": "Mod next Generation"
 

@@ -2,6 +2,7 @@ package com.kentdar.modgen.item;
 
 import com.kentdar.modgen.ModGen;
 import com.kentdar.modgen.block.ModBlock;
+import com.kentdar.modgen.block.ModFluids;
 import com.kentdar.modgen.util.Registration;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -12,6 +13,9 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 
 public class ModItems {
+
+
+
     //Item del bloque
     public  static final RegistryObject<Item> COPPER_INGOT =
             Registration.ITEMS.register("copper_ingot",
@@ -32,6 +36,12 @@ public class ModItems {
             Registration.ITEMS.register("zucchini_seed",
                     () -> new BlockItem(ModBlock.ZUCCHINI_CROP.get(),
                             new Item.Properties().group(ModGen.COURSE_TAB)));
+
+    //Bucket cubo
+    public static final RegistryObject<Item> CUM_BUCKET =
+            Registration.ITEMS.register("cum_bucket",
+                    () -> new BucketItem(ModFluids.CUM_FLUID::get,
+                            new Item.Properties().group(ModGen.COURSE_TAB).maxStackSize(1)));
 
     //Mineral del cobre
     public static final RegistryObject<Item> COPPER_RAW =

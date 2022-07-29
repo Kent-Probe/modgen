@@ -1,6 +1,7 @@
 package com.kentdar.modgen;
 
 import com.kentdar.modgen.block.ModBlock;
+import com.kentdar.modgen.block.ModFluids;
 import com.kentdar.modgen.events.ModEvents;
 import com.kentdar.modgen.item.ModItems;
 import com.kentdar.modgen.util.Config;
@@ -58,6 +59,7 @@ public class ModGen
         Registration.register();
         ModItems.register();
         ModBlock.register();
+        ModFluids.register();
 
         MinecraftForge.EVENT_BUS.register(new ModEvents());
 
