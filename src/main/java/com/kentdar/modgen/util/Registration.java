@@ -1,7 +1,6 @@
 package com.kentdar.modgen.util;
 
 import com.kentdar.modgen.ModGen;
-import com.kentdar.modgen.block.ModBlock;
 import net.minecraft.block.Block;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.item.Item;
@@ -22,7 +21,7 @@ public class Registration {
     public static final DeferredRegister<Fluid> FLUIDS
             = DeferredRegister.create(ForgeRegistries.FLUIDS, ModGen.MOD_ID);
 
-    public static void register(){
+    public static void init(){
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
