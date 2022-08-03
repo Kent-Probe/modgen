@@ -7,6 +7,7 @@ import com.kentdar.modgen.item.ModItems;
 import com.kentdar.modgen.setup.ClientProxy;
 import com.kentdar.modgen.setup.IProxy;
 import com.kentdar.modgen.setup.ServerProxy;
+import com.kentdar.modgen.tileentity.ModTileEntities;
 import com.kentdar.modgen.util.Config;
 import com.kentdar.modgen.util.Registration;
 import net.minecraft.block.Block;
@@ -88,6 +89,10 @@ public class ModGen
         //Register mod EVENTS
         //Registro los eventos
         MinecraftForge.EVENT_BUS.register(new ModEvents());
+
+
+        //Entidades
+        ModTileEntities.register();
     }
 
 
