@@ -21,6 +21,7 @@
 
   "block.modgen.copper_block" : "Copper Block",
   "block.modgen.copper_ore" : "Copper Ore",
+  "block.modgen.electrifier": "Electrifier",
 
   "block.modgen.copper_stairs": "Copper Stairs",
   "block.modgen.copper_fence": "Copper Fence",

@@ -1,7 +1,7 @@
 package com.kentdar.modgen.item;
 
 import com.kentdar.modgen.ModGen;
-import com.kentdar.modgen.block.ModBlock;
+import com.kentdar.modgen.block.ModBlocks;
 import com.kentdar.modgen.block.ModFluids;
 import com.kentdar.modgen.util.Registration;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -34,7 +34,7 @@ public class ModItems {
     //Cultivo
     public static final RegistryObject<Item> ZUCCHINI_SEED =
             Registration.ITEMS.register("zucchini_seed",
-                    () -> new BlockItem(ModBlock.ZUCCHINI_CROP.get(),
+                    () -> new BlockItem(ModBlocks.ZUCCHINI_CROP.get(),
                             new Item.Properties().group(ModGen.COURSE_TAB)));
 
     //Bucket cubo

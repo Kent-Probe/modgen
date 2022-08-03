@@ -1,6 +1,6 @@
 package com.kentdar.modgen;
 
-import com.kentdar.modgen.block.ModBlock;
+import com.kentdar.modgen.block.ModBlocks;
 import com.kentdar.modgen.block.ModFluids;
 import com.kentdar.modgen.events.ModEvents;
 import com.kentdar.modgen.item.ModItems;
@@ -10,30 +10,21 @@ import com.kentdar.modgen.setup.ServerProxy;
 import com.kentdar.modgen.util.Config;
 import com.kentdar.modgen.util.Registration;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DistExecutor;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ModGen.MOD_ID)
@@ -91,7 +82,7 @@ public class ModGen
         //register Items, Blocks, etc...
         //Regstra Items, Bloques, etc...
         ModItems.register();
-        ModBlock.register();
+        ModBlocks.register();
         ModFluids.register();
 
         //Register mod EVENTS

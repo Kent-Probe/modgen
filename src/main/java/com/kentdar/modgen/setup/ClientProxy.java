@@ -1,7 +1,7 @@
 package com.kentdar.modgen.setup;
 
 import com.kentdar.modgen.ModGen;
-import com.kentdar.modgen.block.ModBlock;
+import com.kentdar.modgen.block.ModBlocks;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.Mod;
 public class ClientProxy implements IProxy{
     @Override
     public void init() {
-        RenderTypeLookup.setRenderLayer(ModBlock.ZUCCHINI_CROP.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.ZUCCHINI_CROP.get(), RenderType.getCutout());
     }
 
     @Override

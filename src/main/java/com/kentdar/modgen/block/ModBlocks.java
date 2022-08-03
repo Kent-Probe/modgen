@@ -11,7 +11,7 @@ import net.minecraftforge.fml.RegistryObject;
 
 import java.util.function.Supplier;
 
-public class ModBlock {
+public class ModBlocks {
 
     public static final RegistryObject<Block> COPPER_BLOCK = register("copper_block",
             () -> new Block(AbstractBlock.Properties.create(Material.IRON)
@@ -26,7 +26,7 @@ public class ModBlock {
                     .harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> COPPER_STAIRS = register("copper_stairs",
-            () -> new StairsBlock(() -> ModBlock.COPPER_BLOCK.get()
+            () -> new StairsBlock(() -> ModBlocks.COPPER_BLOCK.get()
                     .getDefaultState(),
                     AbstractBlock.Properties.create(Material.IRON)
                     .hardnessAndResistance(2f, 5f)
@@ -62,6 +62,10 @@ public class ModBlock {
     public static final RegistryObject<Block> ZUCCHINI_CROP = Registration.BLOCKS
             .register("zucchini_crop",
                     () -> new ZucchiniCrops(AbstractBlock.Properties.from(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> ELECTRIFIER = register("electrifier",
+            () -> new Electrifier(AbstractBlock.Properties.create(Material.IRON)
+                    .harvestTool(ToolType.PICKAXE)));
 
     public static void register(){}
 

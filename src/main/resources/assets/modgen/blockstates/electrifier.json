@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "modgen:block/electrifier" },
+    "facing=south": { "model": "modgen:block/electrifier", "y": 180 },
+    "facing=west": { "model": "modgen:block/electrifier", "y": 270 },
+    "facing=east": { "model": "modgen:block/electrifier", "y": 90 }
+  }
+}
