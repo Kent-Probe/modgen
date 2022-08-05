@@ -2,6 +2,7 @@ package com.kentdar.modgen;
 
 import com.kentdar.modgen.block.ModBlocks;
 import com.kentdar.modgen.block.ModFluids;
+import com.kentdar.modgen.container.ModContainers;
 import com.kentdar.modgen.events.ModEvents;
 import com.kentdar.modgen.item.ModItems;
 import com.kentdar.modgen.setup.ClientProxy;
@@ -93,6 +94,9 @@ public class ModGen
 
         //Entidades
         ModTileEntities.register();
+
+        //GUI
+        ModContainers.register();
     }
 
 

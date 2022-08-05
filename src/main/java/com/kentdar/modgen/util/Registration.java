@@ -3,9 +3,11 @@ package com.kentdar.modgen.util;
 import com.kentdar.modgen.ModGen;
 import net.minecraft.block.Block;
 import net.minecraft.fluid.Fluid;
+import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,11 +28,17 @@ public class Registration {
     public static final DeferredRegister<TileEntityType<?>> TILE_ENTITY_TYPES
             = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, ModGen.MOD_ID);
 
+    //GUI
+    public static final DeferredRegister<ContainerType<?>> CONTAINER
+            = DeferredRegister.create(ForgeRegistries.CONTAINERS, ModGen.MOD_ID);
+
     public static void init(){
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
         FLUIDS.register(eventBus);
         TILE_ENTITY_TYPES.register(eventBus);
+        CONTAINER.register(eventBus);
     }
 }
