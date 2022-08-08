@@ -30,6 +30,11 @@
   "block.modgen.copper_slab": "Copper Slab",
   "block.modgen.copper_button": "Copper Button",
 
+  "block.modgen.redwood_planks": "Redwood Planks",
+  "block.modgen.redwood_log": "Redwood Log",
+  "block.modgen.redwood_leaves": "Redwood Leaves",
+  "block.modgen.redwood_sapling": "Redwood Sapling",
+
 
   "itemGroup.courseTab": "Mod next Generation"
 

@@ -5,8 +5,8 @@ import net.minecraft.block.Block;
 
 public enum OreType {
 
-    COPPER_ORE(ModBlocks.COPPER_ORE.get(), 8, 25, 50),
-    COPPER_BLOCK(ModBlocks.COPPER_BLOCK.get(), 10, 10, 60);
+    COPPER_ORE(ModBlocks.COPPER_ORE.get(), 15, 25, 150),
+    COPPER_BLOCK(ModBlocks.COPPER_BLOCK.get(), 5, 0, 12);
 
     private final Block block;
     private final int maxVeinSize;
