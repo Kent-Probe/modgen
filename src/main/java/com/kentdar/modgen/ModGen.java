@@ -3,6 +3,9 @@ package com.kentdar.modgen;
 import com.kentdar.modgen.block.ModBlocks;
 import com.kentdar.modgen.block.ModFluids;
 import com.kentdar.modgen.container.ModContainers;
+import com.kentdar.modgen.entity.BuffaloEntity;
+import com.kentdar.modgen.entity.ModEntityTypes;
+import com.kentdar.modgen.entity.render.BuffaloRender;
 import com.kentdar.modgen.events.ModEvents;
 import com.kentdar.modgen.item.ModItems;
 import com.kentdar.modgen.setup.ClientProxy;
@@ -12,11 +15,13 @@ import com.kentdar.modgen.tileentity.ModTileEntities;
 import com.kentdar.modgen.util.Config;
 import com.kentdar.modgen.util.Registration;
 import net.minecraft.block.Block;
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -60,9 +65,14 @@ public class ModGen
         MinecraftForge.EVENT_BUS.register(this);
     }
 
+    @SuppressWarnings("deprecation")
     private void setup(final FMLCommonSetupEvent event)
     {
         proxy.init();
+
+        DeferredWorkQueue.runLater(() -> {
+            GlobalEntityTypeAttributes.put(ModEntityTypes.BUFFALO.get(), BuffaloEntity.setCustomAttributes().create());
+        });
 
         registerConfig();
         loadConfigs();
@@ -97,6 +107,9 @@ public class ModGen
 
         //GUI
         ModContainers.register();
+
+        //Mobs
+        ModEntityTypes.register();
     }
 
 

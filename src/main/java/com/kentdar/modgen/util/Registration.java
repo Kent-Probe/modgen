@@ -2,9 +2,11 @@ package com.kentdar.modgen.util;
 
 import com.kentdar.modgen.ModGen;
 import net.minecraft.block.Block;
+import net.minecraft.entity.EntityType;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.Item;
+import net.minecraft.tileentity.MobSpawnerTileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -24,13 +26,17 @@ public class Registration {
     public static final DeferredRegister<Fluid> FLUIDS
             = DeferredRegister.create(ForgeRegistries.FLUIDS, ModGen.MOD_ID);
 
-    //Entidades
+    //Entidades de azulejo
     public static final DeferredRegister<TileEntityType<?>> TILE_ENTITY_TYPES
             = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, ModGen.MOD_ID);
 
     //GUI
     public static final DeferredRegister<ContainerType<?>> CONTAINER
             = DeferredRegister.create(ForgeRegistries.CONTAINERS, ModGen.MOD_ID);
+
+    //Mob
+    public static final DeferredRegister<EntityType<?>> ENTITIES
+            = DeferredRegister.create(ForgeRegistries.ENTITIES, ModGen.MOD_ID);
 
     public static void init(){
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -40,5 +46,6 @@ public class Registration {
         FLUIDS.register(eventBus);
         TILE_ENTITY_TYPES.register(eventBus);
         CONTAINER.register(eventBus);
+        ENTITIES.register(eventBus);
     }
 }
