@@ -6,6 +6,7 @@ import com.kentdar.modgen.container.ElectrifierContainer;
 import com.kentdar.modgen.container.ModContainers;
 import com.kentdar.modgen.entity.ModEntityTypes;
 import com.kentdar.modgen.entity.render.BuffaloRender;
+import com.kentdar.modgen.item.ModSpawnEggItem;
 import com.kentdar.modgen.screens.ElectrifierScreen;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.Minecraft;
@@ -24,6 +25,8 @@ public class ClientProxy implements IProxy{
     public void init() {
         RenderTypeLookup.setRenderLayer(ModBlocks.ZUCCHINI_CROP.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.REDWOOD_SAPLING.get(), RenderType.getCutout());
+
+        ModSpawnEggItem.initSpawnEgg();
 
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.BUFFALO.get(), BuffaloRender::new);
 

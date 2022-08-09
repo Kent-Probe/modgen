@@ -3,6 +3,7 @@ package com.kentdar.modgen.item;
 import com.kentdar.modgen.ModGen;
 import com.kentdar.modgen.block.ModBlocks;
 import com.kentdar.modgen.block.ModFluids;
+import com.kentdar.modgen.entity.ModEntityTypes;
 import com.kentdar.modgen.util.Registration;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -15,6 +16,12 @@ import net.minecraftforge.fml.RegistryObject;
 public class ModItems {
 
 
+    //Eggs Spawn
+    public static final RegistryObject<Item> BUFFALO_SPAWNING_EGG =
+            Registration.ITEMS.register("buffalo_spawning_egg",
+                    () -> new ModSpawnEggItem(ModEntityTypes.BUFFALO,
+                            0x451212, 0x000000,
+                            new Item.Properties().group(ModGen.COURSE_TAB) ));
 
     //Item del bloque
     public  static final RegistryObject<Item> COPPER_INGOT =

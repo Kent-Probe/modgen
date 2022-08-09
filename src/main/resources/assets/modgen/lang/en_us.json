@@ -36,6 +36,7 @@
   "block.modgen.redwood_sapling": "Redwood Sapling",
 
   "entity.modgen.buffalo": "Buffalo",
+  "item.modgen.buffalo_spawning_egg": "Buffalo Spawn Egg",
 
   "itemGroup.courseTab": "Mod next Generation"
 }
