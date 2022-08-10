@@ -8,6 +8,8 @@ import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.Item;
 import net.minecraft.tileentity.MobSpawnerTileEntity;
 import net.minecraft.tileentity.TileEntityType;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -38,6 +40,13 @@ public class Registration {
     public static final DeferredRegister<EntityType<?>> ENTITIES
             = DeferredRegister.create(ForgeRegistries.ENTITIES, ModGen.MOD_ID);
 
+    //Biomes
+    public static final DeferredRegister<Biome> BIOMES
+            = DeferredRegister.create(ForgeRegistries.BIOMES, ModGen.MOD_ID);
+
+    public static final DeferredRegister<SurfaceBuilder<?>> SURFACE_BUILDER
+            = DeferredRegister.create(ForgeRegistries.SURFACE_BUILDERS, ModGen.MOD_ID);
+
     public static void init(){
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
@@ -47,5 +56,7 @@ public class Registration {
         TILE_ENTITY_TYPES.register(eventBus);
         CONTAINER.register(eventBus);
         ENTITIES.register(eventBus);
+        SURFACE_BUILDER.register(eventBus);
+        BIOMES.register(eventBus);
     }
 }

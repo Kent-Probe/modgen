@@ -14,6 +14,8 @@ import com.kentdar.modgen.setup.ServerProxy;
 import com.kentdar.modgen.tileentity.ModTileEntities;
 import com.kentdar.modgen.util.Config;
 import com.kentdar.modgen.util.Registration;
+import com.kentdar.modgen.world.biome.ModBiomes;
+import com.kentdar.modgen.world.biome.ModSurfaceBuilders;
 import net.minecraft.block.Block;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
@@ -101,6 +103,9 @@ public class ModGen
         //Registro los eventos
         MinecraftForge.EVENT_BUS.register(new ModEvents());
 
+        //Biomes
+        ModSurfaceBuilders.register();
+        ModBiomes.register();
 
         //Entidades
         ModTileEntities.register();
