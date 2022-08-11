@@ -3,6 +3,7 @@ package com.kentdar.modgen;
 import com.kentdar.modgen.block.ModBlocks;
 import com.kentdar.modgen.block.ModFluids;
 import com.kentdar.modgen.container.ModContainers;
+import com.kentdar.modgen.enchantment.ModEnchantments;
 import com.kentdar.modgen.entity.BuffaloEntity;
 import com.kentdar.modgen.entity.ModEntityTypes;
 import com.kentdar.modgen.entity.render.BuffaloRender;
@@ -11,6 +12,7 @@ import com.kentdar.modgen.item.ModItems;
 import com.kentdar.modgen.setup.ClientProxy;
 import com.kentdar.modgen.setup.IProxy;
 import com.kentdar.modgen.setup.ServerProxy;
+import com.kentdar.modgen.sound.ModSoundsEvents;
 import com.kentdar.modgen.tileentity.ModTileEntities;
 import com.kentdar.modgen.util.Config;
 import com.kentdar.modgen.util.Registration;
@@ -107,6 +109,9 @@ public class ModGen
         ModSurfaceBuilders.register();
         ModBiomes.register();
 
+        //Enchantment
+        ModEnchantments.register();
+
         //Entidades
         ModTileEntities.register();
 
@@ -115,6 +120,9 @@ public class ModGen
 
         //Mobs
         ModEntityTypes.register();
+
+        //Sonidos
+        ModSoundsEvents.register();
     }
 
 

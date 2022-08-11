@@ -4,6 +4,7 @@ import com.kentdar.modgen.ModGen;
 import com.kentdar.modgen.block.ModBlocks;
 import com.kentdar.modgen.block.ModFluids;
 import com.kentdar.modgen.entity.ModEntityTypes;
+import com.kentdar.modgen.item.weapon.BluntItem;
 import com.kentdar.modgen.util.Registration;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -70,6 +71,14 @@ public class ModItems {
                             new Item.Properties()
                                     .defaultMaxDamage(150)
                                     .group(ModGen.COURSE_TAB)));
+
+    public static final RegistryObject<Item> COPPER_CLUB =
+            Registration.ITEMS.register("copper_club",
+                    () -> new CopperClub(ModItemTier.COPPER, 4, 1f,
+                            new Item.Properties()
+                                    .defaultMaxDamage(150)
+                                    .group(ModGen.COURSE_TAB)));
+
     //Pico
     public static final RegistryObject<Item> COPPER_PICKAXE =
             Registration.ITEMS.register("copper_pickaxe",

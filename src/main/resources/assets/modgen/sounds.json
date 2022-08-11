@@ -1,0 +1,7 @@
+{
+  "small_explosion": {
+    "category": "blocks",
+    "subtitle": "modgen:small_explosion",
+    "sounds": ["modgen:small_explosion"]
+  }
+}

@@ -38,5 +38,8 @@
   "entity.modgen.buffalo": "Buffalo",
   "item.modgen.buffalo_spawning_egg": "Buffalo Spawn Egg",
 
+  "item.modgen.copper_club": "Copper CLub",
+  "enchantment.modgen.bluntness": "Bluntness",
+
   "itemGroup.courseTab": "Mod next Generation"
 }
