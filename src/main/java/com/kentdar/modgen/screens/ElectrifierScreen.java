@@ -28,7 +28,7 @@ public class ElectrifierScreen extends ContainerScreen<ElectrifierContainer> {
 
     @Override
     protected void drawGuiContainerForegroundLayer(MatrixStack matrixStack, int x, int y) {
-        drawString(matrixStack, Minecraft.getInstance().fontRenderer, "Energy: " + container.getEnergyLevel(), 28, 10, 0xffffff);
+        drawString(matrixStack, Minecraft.getInstance().fontRenderer, "Energy: " + container.getEnergy(), 28, 10, 0xffffff);
 
     }
 
@@ -40,6 +40,6 @@ public class ElectrifierScreen extends ContainerScreen<ElectrifierContainer> {
         int i = this.guiLeft;
         int j = this.guiTop;
         this.blit(matrixStack, i, j, 0, 0, this.xSize, this.ySize);
-        this.blit(matrixStack, i + 13, j + 9, 176, 0, 11, 64 - container.getEnergyLevel());
+        this.blit(matrixStack, i + 13, j + 9, 176, 0, 11, 64 - container.getEnergy());
     }
 }
