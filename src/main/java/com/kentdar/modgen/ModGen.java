@@ -48,7 +48,7 @@ public class ModGen
 
     public static IProxy proxy;
 
-    public static final ItemGroup COURSE_TAB = new ItemGroup("courseTab") {
+    public static final ItemGroup COURSE_TAB = new ItemGroup("coursetab") {
         @Override
         public ItemStack createIcon() {
             return new ItemStack(ModItems.COPPER_INGOT.get());

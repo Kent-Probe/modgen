@@ -1,6 +1,0 @@
-{
-  "parent": "block/crop",
-  "textures": {
-    "crop": "modgen:block/zucchini_crop_stage0"
-  }
-}
