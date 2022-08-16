@@ -1,0 +1,24 @@
+{
+  "type": "modgen:kjdim",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "layers": [
+        {
+          "height": 1,
+          "block": "minecraft:bedrock"
+        },
+        {
+          "height": 60,
+          "block": "minecraft:sandstone"
+        }
+      ],
+      "biome": "minecraft:plains",
+      "lakes": false,
+      "features": false,
+      "structures": {
+        "structures": {}
+      }
+    }
+  }
+}

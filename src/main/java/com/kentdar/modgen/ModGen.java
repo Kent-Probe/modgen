@@ -18,6 +18,7 @@ import com.kentdar.modgen.util.Config;
 import com.kentdar.modgen.util.Registration;
 import com.kentdar.modgen.world.biome.ModBiomes;
 import com.kentdar.modgen.world.biome.ModSurfaceBuilders;
+import com.kentdar.modgen.world.dimension.ModDimensions;
 import net.minecraft.block.Block;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
@@ -123,6 +124,10 @@ public class ModGen
 
         //Sonidos
         ModSoundsEvents.register();
+
+        //Dimension
+        ModDimensions.register();
+
     }
 
 
