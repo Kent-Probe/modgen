@@ -31,7 +31,8 @@ public class ModLanguageProvider extends LanguageProvider
                 add("block.modgen.copper_button", "Copper Button");
                 add("block.modgen.copper_ore", "Copper Ore");
                 add("block.modgen.electrifier", "Electrifier");
-                add("item.modgen.copper_block","Copper Block");
+                add("block.modgen.big_chest", "Big Chest");
+                add("block.modgen.copper_block","Copper Block");
 
                 //Items
                 add("item.modgen.copper_ingot", "Copper Ingot");
@@ -69,6 +70,9 @@ public class ModLanguageProvider extends LanguageProvider
                 //Enchants
                 add("item.modgen.copper_club", "Copper CLub");
                 add("enchantment.modgen.bluntness", "Bluntness");
+
+                //Screen
+                add("screen.modgen.bigchest", "Big Chest");
 
                 //Name of Course Tab
                 add("itemGroup.coursetab", "Mod next Generation");

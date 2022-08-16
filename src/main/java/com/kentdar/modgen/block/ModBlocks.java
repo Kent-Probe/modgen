@@ -1,6 +1,8 @@
 package com.kentdar.modgen.block;
 
 import com.kentdar.modgen.ModGen;
+import com.kentdar.modgen.item.BigChestItemStackTileEntityRender;
+import com.kentdar.modgen.tileentity.ModTileEntities;
 import com.kentdar.modgen.util.Registration;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -9,9 +11,15 @@ import net.minecraft.item.Item;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 
+import javax.imageio.spi.RegisterableService;
 import java.util.function.Supplier;
 
 public class ModBlocks {
+
+    public static final RegistryObject<Block> BIG_CHEST = registerTileEntity("big_chest",
+            () -> new BigChestBlock(AbstractBlock.Properties.create(Material.ROCK)
+                    .hardnessAndResistance(3f, 10f), () -> ModTileEntities.BIG_CHEST_TILE_ENTITY.get()));
+
 
     public static final RegistryObject<Block> COPPER_BLOCK = register("copper_block",
             () -> new Block(AbstractBlock.Properties.create(Material.IRON)
@@ -87,6 +95,12 @@ public class ModBlocks {
         RegistryObject<T> toReturn = Registration.BLOCKS.register(name, block);
         Registration.ITEMS.register(name, () -> new BlockItem(toReturn.get(),
                 new Item.Properties().group(ModGen.COURSE_TAB)));
+        return toReturn;
+    }
+    private static <T extends Block>RegistryObject<T> registerTileEntity(String name, Supplier<T> block){
+        RegistryObject<T> toReturn = Registration.BLOCKS.register(name, block);
+        Registration.ITEMS.register(name, () -> new BlockItem(toReturn.get(),
+                new Item.Properties().group(ModGen.COURSE_TAB).setISTER(() ->BigChestItemStackTileEntityRender::new)));
         return toReturn;
     }
 }
