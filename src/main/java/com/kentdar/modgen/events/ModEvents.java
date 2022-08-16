@@ -1,6 +1,8 @@
 package com.kentdar.modgen.events;
 
 import com.kentdar.modgen.ModGen;
+import com.kentdar.modgen.command.ReturnHomeCommand;
+import com.kentdar.modgen.command.SetHomeCommand;
 import com.kentdar.modgen.item.ModItems;
 import com.kentdar.modgen.util.Config;
 import net.minecraft.entity.LivingEntity;
@@ -14,10 +16,12 @@ import net.minecraft.potion.Effects;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
+import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.server.command.ConfigCommand;
 import org.apache.logging.log4j.LogManager;
 
 import java.util.Collection;
@@ -49,6 +53,13 @@ public class ModEvents {
                 }
             }
         }
+    }
+    @SubscribeEvent
+    public void onCommandsRegister(RegisterCommandsEvent event){
+        new SetHomeCommand(event.getDispatcher());
+        new ReturnHomeCommand(event.getDispatcher());
+
+        ConfigCommand.register(event.getDispatcher());
     }
     @SubscribeEvent
     public void onCopperedSheepDrops(LivingDropsEvent event){
